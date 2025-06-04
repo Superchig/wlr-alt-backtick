@@ -2,7 +2,7 @@ run: build
     build-linux/wlr-alt-backtick
 
 build:
-    cmake . -B build-linux -G Ninja
+    cmake . -B build-linux -G Ninja -DCMAKE_BUILD_TYPE=Debug
     ninja -C build-linux
 
 build-linux-release:
