@@ -1,5 +1,5 @@
 run: build
-    build-linux/wl-alt-backtick
+    build-linux/wlr-alt-backtick
 
 build:
     cmake . -B build-linux -G Ninja

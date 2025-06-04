@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.30)
 
 # Set up project basics
-project(wl-alt-backtick)
+project(wlr-alt-backtick)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD 23)
 set(CMAKE_C_STANDARD_REQUIRED true)
 set(CMAKE_EXPORT_COMPILE_COMMANDS true)
 
@@ -22,12 +22,12 @@ endif()
 #   set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}")
 # endif()
 
-add_executable(wl-alt-backtick src/main.cpp)
+add_executable(wlr-alt-backtick src/main.cpp)
 
 # Dependencies
 
 function(LINK_LIB LIB)
-  target_link_libraries(wl-alt-backtick "${LIB}")
+  target_link_libraries(wlr-alt-backtick "${LIB}")
 endfunction()
 
 cmake_policy(SET CMP0168 NEW) # Don't use a separate sub-build for FetchContent

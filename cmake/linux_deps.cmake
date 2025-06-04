@@ -80,6 +80,7 @@ function(ADD_WAYLAND_COMMAND PROTOCOL)
 endfunction()
 
 add_wayland_command(ext-foreign-toplevel-list-v1)
+add_wayland_command(wlr-foreign-toplevel-management-unstable-v1)
 
 # Libwayland - wayland-client
 
@@ -93,8 +94,8 @@ add_library(
 
   "${LIBWAYLAND_SRC}/src/wayland-client-protocol.c"
   "${LIBWAYLAND_SRC}/src/wayland-client-protocol.h"
-  "${LIBWAYLAND_SRC}/src/ext-foreign-toplevel-list-v1.c"
-  "${LIBWAYLAND_SRC}/src/ext-foreign-toplevel-list-v1.h"
+  "${LIBWAYLAND_SRC}/src/wlr-foreign-toplevel-management-unstable-v1.c"
+  "${LIBWAYLAND_SRC}/src/wlr-foreign-toplevel-management-unstable-v1.h"
 )
 link_lib(wayland-client)
 target_include_directories(wayland-client SYSTEM PUBLIC cmake/wayland-scanner/ext/libwayland/wayland-scanner/include) # For wayland-version.h
