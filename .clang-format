@@ -1,0 +1,263 @@
+---
+# BasedOnStyle: Microsoft
+# IndentExternBlock: NoIndent
+
+# Common / Special Settings
+
+ColumnLimit: 120
+UseTab: Never
+IndentWidth: 4
+IndentExternBlock: NoIndent
+# BreakBeforeBraces: Custom # Worth looking at this further down
+# BraceWrapping: # Worth looking at this further down
+
+# Rest
+
+# BasedOnStyle: NotSet # Not set intentionally
+AccessModifierOffset: -2 # See IndentAccessModifiers
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Right
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+  AlignCompound: true # Only for AlignConsecutiveAssignments
+  # AlignFunctionDeclarations: true # Only for AlignConsecutiveDeclarations, unsure why it breaks indents
+  AlignFunctionPointers: true # Only for AlignConsecutiveDeclarations
+  PadOperators: true # Only for AlignConsecutiveAssignments
+AlignConsecutiveBitFields:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+  AlignCompound: true # Only for AlignConsecutiveAssignments
+  # AlignFunctionDeclarations: true # Only for AlignConsecutiveDeclarations, unsure why it breaks indents
+  AlignFunctionPointers: true # Only for AlignConsecutiveDeclarations
+  PadOperators: true # Only for AlignConsecutiveAssignments
+AlignConsecutiveDeclarations:
+  Enabled: false
+  AcrossEmptyLines: false
+  AcrossComments: true
+  AlignCompound: true # Only for AlignConsecutiveAssignments
+  # AlignFunctionDeclarations: true # Only for AlignConsecutiveDeclarations, unsure why it breaks indents
+  AlignFunctionPointers: true # Only for AlignConsecutiveDeclarations
+  PadOperators: true # Only for AlignConsecutiveAssignments
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+  AlignCompound: true # Only for AlignConsecutiveAssignments
+  # AlignFunctionDeclarations: true # Only for AlignConsecutiveDeclarations, unsure why it breaks indents
+  AlignFunctionPointers: true # Only for AlignConsecutiveDeclarations
+  PadOperators: true # Only for AlignConsecutiveAssignments
+# AlignConsecutiveShortCaseStatements: # Not set intentionally
+# AlignConsecutiveTableGenBreakingDAGArgColons: # Not set intentionally
+# AlignConsecutiveTableGenCondOperatorColons: # Not set intentionally
+# AlignConsecutiveTableGenDefinitionColons: # Not set intentionally
+AlignEscapedNewlines: LeftWithLastLine
+# AlignOperands: # Do I want this?
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 1
+
+AllowAllArgumentsOnNextLine: false
+# AllowAllConstructorInitializersOnNextLine: # Deprecated
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseExpressionOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortCompoundRequirementOnASingleLine: true
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: false
+# AllowShortNamespacesOnASingleLine: false # Unsure why it breaks indents
+AlwaysBreakBeforeMultilineStrings: false
+
+# AttributeMacros: [__capability, _Out_, _Out_opt_] # Do I want this?
+
+BinPackArguments: false
+# BinPackLongBracedList: false # Unsure why it breaks indents
+BinPackParameters: OnePerLine
+BitFieldColonSpacing: Both
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: true
+  AfterClass: true
+  AfterControlStatement: Always
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: true
+  AfterExternBlock: true
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeWhile: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+BracedInitializerIndentWidth: 0 # Use ContinuationIndentWidth
+
+BreakAdjacentStringLiterals: false
+BreakAfterAttributes: Always
+BreakAfterJavaFieldAnnotations: true
+BreakAfterReturnType: Automatic
+BreakArrays: true # Only for JSON as of 20.1.0
+BreakBeforeBinaryOperators: None
+# BreakBeforeBraces: Custom # See above
+BreakBeforeConceptDeclarations: Allowed
+BreakBeforeInlineASMColon: OnlyMultiline
+BreakBeforeTernaryOperators: true
+# BreakBinaryOperations: RespectPrecedence # Unsure why it breaks indents
+BreakConstructorInitializers: AfterColon
+BreakFunctionDefinitionParameters: false
+# BreakInheritanceList: AfterColon # Do I want this?
+BreakStringLiterals: false
+# BreakTemplateDeclarations: MultiLine # Do I want this?
+
+# CommentPragmas: '^ (clang-format|LINT)' # Use default for now
+CompactNamespaces: false
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 4
+Cpp11BracedListStyle: true
+# DeriveLineEnding: # Deprecated
+DerivePointerAlignment: false
+DisableFormat: false
+EmptyLineAfterAccessModifier: Leave
+EmptyLineBeforeAccessModifier: Always
+# ExperimentalAutoDetectBinPacking: # Experimental, may go away
+FixNamespaceComments: false
+# ForEachMacros: # Not set intentionally
+# IfMacros: # Not set intentionally
+IncludeBlocks: Preserve
+# IncludeCategories: # Not set intentionally, may be worth looking at later
+# IncludeIsMainRegex: # Do I want this?
+# IncludeIsMainSourceRegex # Do I want this?
+IndentAccessModifiers: false
+IndentCaseBlocks: false
+IndentCaseLabels: false
+# IndentExportBlock: true # Unsure why it breaks indents
+# IndentExternBlock: NoIndent # See above for actual config
+IndentGotoLabels: true
+IndentPPDirectives: None
+IndentRequiresClause: true
+# IndentWidth: 4 # See common section above for actual setting
+IndentWrappedFunctionNames: false
+InsertNewlineAtEOF: true
+# InsertTrailingCommas: true # Only available for Javascript
+IntegerLiteralSeparator:
+  Binary: 0
+  # BinaryMinDigits: 0 # Unset intentionally
+  Decimal: 0
+  # DecimalMinDigits: 0 # Unset intentionally
+  Hex: 0
+  # HexMinDigits: 0 # Unset intentionally
+# JavaImportGroups: # For Java
+# JavaScriptQuotes: # Only for Javascript
+# JavaScriptWrapImports # Only for Javascript
+KeepEmptyLines: # See also MaxEmptyLinesToKeep
+  AtEndOfFile: false
+  AtStartOfBlock: false
+  AtStartOfFile: false
+# KeepFormFeed: # Do I want this?
+# LambdaBodyIndentation: # Do I want this?
+# Language: # Do I want this?
+LineEnding: LF
+# MacroBlockBegin: # Use default for now
+# MacroBlockEnd: # Use default for now
+# Macros: # Use default for now
+# MainIncludeChar: # Do I want this?
+# MaxEmptyLinesToKeep: # Use default for now
+# NamespaceIndentation: # Use default for now
+# NamespaceMacros: # Use default for now
+
+# ObjCBinPackProtocolList: # Use default for now
+# ObjCBlockIndentWidth: # Use default for now
+# ObjCBreakBeforeNestedBlockParam: # Use default for now
+# ObjCPropertyAttributeOrder: Use default for now
+# ObjCSpaceAfterProperty: Use default for now
+# ObjCSpaceBeforeProtocolList: Use default for now
+
+PPIndentWidth: -1
+# PackConstructorInitializers: Use default for now
+
+# https://stackoverflow.com/questions/26635370/in-clang-format-what-do-the-penalties-do
+# PenaltyBreakAssignment: 1000 # Doesn't quite do what I want
+# PenaltyBreakBeforeFirstCallParameter: # Do I want this?
+# PenaltyBreakBeforeMemberAccess: # Do I want this?
+# PenaltyBreakComment: # Do I want this?
+# PenaltyBreakFirstLessLess: # Do I want this?
+# PenaltyBreakOpenParenthesis: # Do I want this?
+# PenaltyBreakScopeResolution: # Do I want this?
+# PenaltyBreakString: # Do I want this?
+# PenaltyBreakTemplateDeclaration: # Do I want this?
+# PenaltyExcessCharacter: # Do I want this?
+# PenaltyIndentedWhitespace: # Do I want this?
+# PenaltyReturnTypeOnItsOwnLine: # Do I want this?
+
+PointerAlignment: Right
+QualifierAlignment: Left
+# QualifierOrder: # Use default for now
+# RawStringFormats: # Use default for now
+ReferenceAlignment: Right
+# ReflowComments: # Use default for now
+RemoveBracesLLVM: false
+# RemoveEmptyLinesInUnwrappedLines: true # Unsure why it breaks indents
+RemoveParentheses: Leave
+RemoveSemicolon: false
+# RequiresClausePosition: # Use default for now
+# RequiresExpressionIndentation # Use default for now
+SeparateDefinitionBlocks: Leave
+# ShortNamespaceLines: # Use default for now
+# SkipMacroDefinitionBody: # Use default for now
+# SortIncludes: # Use default for now
+# SortJavaStaticImport: # Java only
+# SortUsingDeclarations: # Use default
+
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+# SpaceAfterTemplateKeyword: # Use default for now
+# SpaceAroundPointerQualifiers: # Use default for now
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+# SpaceBeforeCpp11BracedList: # Use default for now
+# SpaceBeforeCtorInitializerColon: # Use default for now
+# SpaceBeforeInheritanceColon: # Use default for now
+# SpaceBeforeJsonColon: # Only used in JSON
+# SpaceBeforeParens: # Use default for now
+# SpaceBeforeParensOptions: # Use default for now
+# SpaceBeforeRangeBasedForLoopColon: # Use default for now
+SpaceBeforeSquareBrackets: false
+# SpaceInEmptyBlock: # Use default for now
+# SpaceInEmptyParentheses: # Deprecated
+# SpacesBeforeTrailingComments: # Use default for now
+SpacesInAngles: Never
+# SpacesInCStyleCastParentheses: # Deprecated
+# SpacesInConditionalStatement: # Deprecated
+SpacesInContainerLiterals: false
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: 1
+SpacesInParens: Never
+# SpacesInParensOptions: # Above is not Custom
+# SpacesInParentheses: # Deprecated
+SpacesInSquareBrackets: false
+# Standard: # Use default for now
+# StatementAttributeLikeMacros: # Use default for now
+# StatementMacros: # Use default for now
+# TabWidth: # Use default for now
+# TableGenBreakInsideDAGArg: # Use default
+# TableGenBreakingDAGArgOperators: # Use default
+# TemplateNames: # Use default for now
+# TypeNames: # Use default for now
+# TypenameMacros: # Use default for now
+# UseCRLF: # Deprecated
+# UseTab: Never # See common section above for actual setting
+# VariableTemplates: # Use default for now
+# VerilogBreakBetweenInstancePorts: # For Verilog
+# WhitespaceSensitiveMacros: # Use default for now
+# WrapNamespaceBodyWithEmptyLines: # Use default for now

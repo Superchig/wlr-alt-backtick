@@ -1,0 +1,8 @@
+.cache/
+/build-*
+/dist-*
+/deps
+/downloads
+compile_commands.json
+.clangd
+*.spv

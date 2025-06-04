@@ -1,0 +1,8 @@
+build:
+    #!/bin/sh
+    export PATH="$PATH:$PWD/../../scripts"
+    cmake . -G Ninja -B build -DCMAKE_TOOLCHAIN_FILE=../toolchain-{{ os() }}-zig.cmake
+    ninja -C build
+
+clean:
+    rm -rf build deps
