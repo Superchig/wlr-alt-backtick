@@ -7,27 +7,20 @@
 
 // Types
 
-typedef struct wl_registry wl_registry;
-typedef struct wl_display wl_display;
-typedef struct wl_registry_listener wl_registry_listener;
-
-typedef struct zwlr_foreign_toplevel_manager_v1 zwlr_foreign_toplevel_manager_v1;
-typedef struct zwlr_foreign_toplevel_handle_v1 zwlr_foreign_toplevel_handle_v1;
-
-typedef struct
+struct ToplevelInfo
 {
     zwlr_foreign_toplevel_handle_v1 *toplevel;
     const char *app_id;
-} ToplevelInfo;
+};
 
-typedef struct
+struct State
 {
     zwlr_foreign_toplevel_manager_v1 *toplevel_manager;
 
     int toplevel_size;
     int toplevel_capacity;
     ToplevelInfo *toplevels;
-} State;
+};
 
 // Forward declarations
 
