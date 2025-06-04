@@ -8,7 +8,7 @@ build:
 build-linux-release:
     #!/bin/sh
     export PATH="$PATH:$PWD/scripts"
-    cmake . -B build-linux-release -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-linux-zig.cmake
+    cmake . -B build-linux-release -G Ninja -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-linux-zig.cmake
     ninja -C build-linux-release
 
 clean:

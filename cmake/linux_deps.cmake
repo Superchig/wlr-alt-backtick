@@ -79,14 +79,19 @@ function(ADD_WAYLAND_COMMAND PROTOCOL)
   )
 endfunction()
 
-add_wayland_command(ext-foreign-toplevel-list-v1)
 add_wayland_command(wlr-foreign-toplevel-management-unstable-v1)
 
 # Libwayland - wayland-client
 
+if(CMAKE_BUILD_TYPE STREQUAL "Release" OR CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo" OR CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
+  set(WAYLAND_CLIENT_TYPE "STATIC")
+else()
+  set(WAYLAND_CLIENT_TYPE "SHARED")
+endif()
+
 add_library(
   wayland-client
-  SHARED
+  "${WAYLAND_CLIENT_TYPE}"
   ${LIBWAYLAND_SRC}/src/connection.c
   ${LIBWAYLAND_SRC}/src/wayland-client.c
   ${LIBWAYLAND_SRC}/src/wayland-os.c

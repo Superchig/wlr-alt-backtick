@@ -13,9 +13,9 @@ set(CMAKE_C_COMPILER "zig-cc${SHELL_SCRIPT_EXT}" CACHE STRING "C compiler" FORCE
 set(CMAKE_CXX_COMPILER zig-c++${SHELL_SCRIPT_EXT} CACHE STRING "C++ compiler" FORCE)
 set(CMAKE_ASM_COMPILER "zig-cc${SHELL_SCRIPT_EXT}" CACHE STRING "ASM compiler" FORCE)
 if("${CMAKE_BUILD_TYPE}" STREQUAL "Release" OR "${CMAKE_BUILD_TYPE}" STREQUAL "RelWithDebInfo" OR "${CMAKE_BUILD_TYPE}" STREQUAL "MinSizeRel")
-  set(CMAKE_C_COMPILER_TARGET "x86_64-linux-gnu.2.29")
-  set(CMAKE_CXX_COMPILER_TARGET "x86_64-linux-gnu.2.29")
-  set(CMAKE_ASM_COMPILER_TARGET "x86_64-linux-gnu.2.29")
+  set(CMAKE_C_COMPILER_TARGET "x86_64-linux-musl")
+  set(CMAKE_CXX_COMPILER_TARGET "x86_64-linux-musl")
+  set(CMAKE_ASM_COMPILER_TARGET "x86_64-linux-musl")
 endif()
 
 # Configure the linker (Zig handles linking internally)
